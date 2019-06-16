@@ -1,0 +1,34 @@
+var group = [
+  { name: { first: 'Alyssa', last: 'Hacker' }, birthday: 1987 },
+  { name: { first: 'Ben', last: 'Bitdiddle' }, birthday: 1984 },
+  { name: { first: 'Eva', last: 'Ator' }, birthday: 1980 },
+  { name: { first: 'Lem', last: 'Tweakit' }, birthday: 1989 },
+  { name: { first: 'Louis', last: 'Reasoner' }, birthday: 1992 }
+];
+
+// write a function oldest that takes in the group array and returns the person object who is the oldest
+
+// write a function youngest that takes in the group array and returns the person object who is the youngest
+
+function oldest(group) {
+  
+    // Store the outcome 
+  var oldestPerson = group[0];
+
+	for (var i = 0; i < group.length; i++) { //loop through the group
+  
+  // for (var key in group[i]) {
+  // console.log(group[i][key])
+//}
+
+
+      if (group[i].birthday < oldestPerson.biirthday){
+        
+        //console.log(oldestPerson[i]);
+      oldestPerson = group[i];
+      }
+      	 
+  }
+  return oldestPerson;
+}
+oldest(group);
